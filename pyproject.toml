@@ -42,6 +42,7 @@ dev = [
 huffman-compress = "file_compressor:main"
 grep-clone = "grep_clone:main"
 json-parser = "json_parser:main"
+csv-parser = "csv_parser:main"
 
 [project.urls]
 Homepage = "https://github.com/yksanjo/cli-tools"

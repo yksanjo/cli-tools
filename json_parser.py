@@ -189,7 +189,7 @@ class JSONLexer:
         return Token(TokenType.STRING, ''.join(result), start_line, start_col)
     
     def read_number(self) -> Token:
-        """
+        r"""
         Read a JSON number literal.
         
         JSON numbers follow: -?(0|[1-9]\d*)(\.\d+)?([eE][+-]?\d+)?
@@ -225,9 +225,11 @@ class JSONLexer:
                 num_str.append(self.advance())
         
         # Exponent part
-        if self.current_char() in 'eE':
+        char = self.current_char()
+        if char is not None and char in 'eE':
             num_str.append(self.advance())
-            if self.current_char() in '+-':
+            char = self.current_char()
+            if char is not None and char in '+-':
                 num_str.append(self.advance())
             if not self.current_char() or not self.current_char().isdigit():
                 raise SyntaxError(

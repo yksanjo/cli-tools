@@ -1,0 +1,7 @@
+Hello, World!
+This is a sample text file for testing the file compression tool.
+It contains various characters and patterns to demonstrate Huffman coding.
+The quick brown fox jumps over the lazy dog.
+1234567890
+Special characters: !@#$%^&*()_+-=[]{}|;':",./<>?
+Unicode: 你好世界 🌍

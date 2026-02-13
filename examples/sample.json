@@ -1,0 +1,27 @@
+{
+  "name": "cli-tools",
+  "version": "0.1.0",
+  "description": "Educational CLI tools collection",
+  "tools": [
+    {
+      "name": "file_compressor",
+      "algorithm": "Huffman coding",
+      "complexity": "O(n log n)"
+    },
+    {
+      "name": "grep_clone", 
+      "algorithm": "Regex matching",
+      "complexity": "O(n × m)"
+    },
+    {
+      "name": "json_parser",
+      "algorithm": "Recursive descent",
+      "complexity": "O(n)"
+    }
+  ],
+  "metadata": {
+    "language": "Python",
+    "python_version": ">=3.8",
+    "license": "MIT"
+  }
+}

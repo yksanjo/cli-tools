@@ -76,6 +76,29 @@ python json_parser.py tokenize '[1, "hello", null]'
 - Pretty-printing with proper indentation
 - Detailed error messages with line/column info
 
+---
+
+### 📊 CSV Parser
+
+An RFC 4180 compliant CSV parser using state machines.
+
+**Concepts:** State machines, streaming parsers, dialect detection
+
+```bash
+python csv_parser.py parse data.csv
+python csv_parser.py validate data.csv
+python csv_parser.py convert data.csv output.json
+python csv_parser.py sniff data.csv
+```
+
+**Features:**
+- RFC 4180 compliant parsing
+- State machine implementation
+- Handles quoted fields with commas and newlines
+- Escaped quote handling ("")
+- Automatic dialect detection
+- CSV to JSON conversion
+
 ## Installation
 
 ### From PyPI (coming soon)
@@ -133,6 +156,7 @@ These tools are designed to teach fundamental CS concepts:
 | File Compressor | Huffman coding, min-heap | O(n log n) |
 | Grep Clone | Regex matching, iterators | O(n × m) |
 | JSON Parser | Recursive descent, tokenization | O(n) |
+| CSV Parser | State machine | O(n) |
 
 ## Development
 
