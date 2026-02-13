@@ -1,6 +1,13 @@
 # CLI Tools Collection
 
+[![CI](https://github.com/yksanjo/cli-tools/actions/workflows/ci.yml/badge.svg)](https://github.com/yksanjo/cli-tools/actions/workflows/ci.yml)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 A collection of computationally interesting CLI tools built from scratch in Python. Each tool demonstrates fundamental computer science concepts and algorithms.
+
+**[Features](#tools-included) • [Installation](#installation) • [Usage](#usage) • [Development](#development)**
 
 ## Tools Included
 
@@ -69,20 +76,52 @@ python json_parser.py tokenize '[1, "hello", null]'
 - Pretty-printing with proper indentation
 - Detailed error messages with line/column info
 
-## Requirements
-
-- Python 3.7+
-- No external dependencies (stdlib only)
-
 ## Installation
+
+### From PyPI (coming soon)
+
+```bash
+pip install cli-tools
+```
+
+### From Source
 
 ```bash
 # Clone the repository
 git clone https://github.com/yksanjo/cli-tools.git
 cd cli-tools
 
-# Make executable (optional)
-chmod +x *.py
+# Install in editable mode
+pip install -e .
+
+# Or install with development dependencies
+pip install -e ".[dev]"
+```
+
+## Usage
+
+After installation, the tools are available as command-line scripts:
+
+```bash
+# File compression
+huffman-compress compress input.txt output.huff
+huffman-compress decompress output.huff restored.txt
+
+# Grep clone
+grep-clone "def " *.py
+grep-clone -r "TODO" .
+
+# JSON parser
+json-parser validate config.json
+json-parser parse '{"key": "value"}'
+```
+
+Or run directly with Python:
+
+```bash
+python file_compressor.py compress input.txt output.huff
+python grep_clone.py -n "def " *.py
+python json_parser.py validate config.json
 ```
 
 ## Educational Value
@@ -95,6 +134,73 @@ These tools are designed to teach fundamental CS concepts:
 | Grep Clone | Regex matching, iterators | O(n × m) |
 | JSON Parser | Recursive descent, tokenization | O(n) |
 
+## Development
+
+### Setup
+
+```bash
+# Install development dependencies
+pip install -e ".[dev]"
+
+# Or use the Makefile
+make install-dev
+```
+
+### Running Tests
+
+```bash
+# Run all tests
+pytest
+
+# Run with coverage
+pytest --cov=. --cov-report=html
+
+# Or use Make
+make test
+make test-cov
+```
+
+### Code Quality
+
+```bash
+# Run all checks
+make check-all
+
+# Individual checks
+make lint          # ruff
+make format-check  # black
+make type-check    # mypy
+make format        # auto-format with black
+```
+
+### CI/CD
+
+This project uses GitHub Actions for continuous integration. The pipeline runs:
+- Linting with `ruff`
+- Format checking with `black`
+- Type checking with `mypy`
+- Tests with `pytest` across Python 3.8-3.12
+- Package building
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Run tests and linting (`make check-all`)
+4. Commit your changes (`git commit -m 'Add amazing feature'`)
+5. Push to the branch (`git push origin feature/amazing-feature`)
+6. Open a Pull Request
+
 ## License
 
-MIT License - Feel free to use, modify, and learn from!
+MIT License - see [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+These tools were built for educational purposes to demonstrate fundamental computer science concepts. They are not intended to replace production-grade tools but rather to serve as learning resources.
+
+---
+
+⭐ **Star this repo if you found it helpful!**
