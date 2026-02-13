@@ -99,6 +99,32 @@ python csv_parser.py sniff data.csv
 - Automatic dialect detection
 - CSV to JSON conversion
 
+---
+
+### 🎯 Habit Tracker
+
+A gamified habit tracker with streaks, heatmaps, reminders, and achievements.
+
+**Concepts:** Data persistence, date calculations, gamification systems
+
+```bash
+python habit_tracker.py add "Exercise" --color green --target 30
+python habit_tracker.py done "Exercise"
+python habit_tracker.py list
+python habit_tracker.py stats
+python habit_tracker.py achievements
+python habit_tracker.py export
+```
+
+**Features:**
+- 🔥 Streak counters (current and longest)
+- 📊 ASCII heatmap visualizations
+- ⏰ Daily reminder system
+- 📁 CSV export for data portability
+- 🎮 XP and leveling system
+- 🏆 8 unlockable achievements
+- 🎨 Color-coded habits
+
 ## Installation
 
 ### From PyPI (coming soon)
@@ -157,6 +183,7 @@ These tools are designed to teach fundamental CS concepts:
 | Grep Clone | Regex matching, iterators | O(n × m) |
 | JSON Parser | Recursive descent, tokenization | O(n) |
 | CSV Parser | State machine | O(n) |
+| Habit Tracker | Date calculations, persistence | O(n) |
 
 ## Development
 
