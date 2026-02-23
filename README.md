@@ -1,5 +1,12 @@
 # cli-tools
 
+Production-grade project scaffold focused on reliability, maintainability, and fast onboarding.
+
+[![CI](https://img.shields.io/github/actions/workflow/status/yksanjo/cli-tools/ci.yml?branch=main&label=ci)](https://github.com/yksanjo/cli-tools/actions)
+![License](https://img.shields.io/github/license/yksanjo/cli-tools)
+![Last Commit](https://img.shields.io/github/last-commit/yksanjo/cli-tools)
+![Repo Size](https://img.shields.io/github/repo-size/yksanjo/cli-tools)
+
 ## Detailed Description
 
 cli-tools is maintained as an industry-grade software project with production-ready engineering practices.  
